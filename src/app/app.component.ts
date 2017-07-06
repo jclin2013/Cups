@@ -1,22 +1,17 @@
 import { Component } from '@angular/core';
 
-export class Cup {
-  id: number;
-  material: string;
-  name: string;
-  display: string;
-}
-
 @Component({
   selector: 'my-app',
-  templateUrl: './app.component.html'
+  template: `
+    <h1>{{title}}</h1>
+    <nav>
+      <a routerLink="/cups-table">Cups</a>
+      <a routerLink="/dashboard">Dashboard</a>
+    </nav>
+    <router-outlet></router-outlet>
+  `
 })
-export class AppComponent  {
+
+export class AppComponent {
   title = 'Cups';
-  cup: Cup = {
-    id: 1,
-    name: 'Starbucks',
-    material: 'glass',
-    display: 'large'
-  }
 }

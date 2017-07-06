@@ -1,0 +1,53 @@
+<h2>Cups</h2>
+
+<div class="cups">
+
+  <button>Save changes</button>
+
+  <div id="table">
+    <div>Name:
+      <div *ngFor="let cup of cups">
+        <input [(ngModel)]="cup.name" placeholder="cup.name">
+      </div>
+    </div>
+
+    <div>Material:
+      <div *ngFor="let cup of cups">
+        <input [(ngModel)]="cup.material" placeholder="cup.material">
+      </div>
+    </div>
+
+    <div>Display:
+      <div *ngFor="let cup of cups">
+        <input [(ngModel)]="cup.display" placeholder="cup.display">
+        <button>x</button>
+      </div>
+    </div>
+
+</div>
+<!-- <ul class="cups">
+  <div>
+  <li
+    *ngFor="let cup of cups"
+    (click)="onSelect(cup)"
+    [class.selected]="cup === selectedCup">
+    <span class="singleCup">{{cup.id}}</span> {{cup.name}}
+  </li>
+</ul> -->
+
+<!-- <div *ngIf="selectedCup">
+  <h2>{{selectedCup.name}} details!</h2>
+  <div><label>id: </label>{{selectedCup.id}}</div>
+  <div>
+    <label>name: </label>
+    <input [(ngModel)]="selectedCup.name" placeholder="selectedCup.name">
+  </div>
+  <div>
+    <label>material: </label>
+    <input [(ngModel)]="selectedCup.material" placeholder="selectedCup.material">
+  </div>
+  <div>
+    <label>display: </label>
+    <input [(ngModel)]="selectedCup.display" placeholder="selectedCup.display">
+  </div>
+</div> -->
