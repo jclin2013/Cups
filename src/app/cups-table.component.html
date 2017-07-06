@@ -12,13 +12,22 @@
 
     <div>Material:
       <div *ngFor="let cup of cups">
-        <input [(ngModel)]="cup.material" placeholder="cup.material">
+        <select [(ngModel)]="cup.material">
+          <option value="paper">paper</option>
+          <option value="glass">glass</option>
+          <option value="ceramic">ceramic</option>
+        </select>
       </div>
     </div>
 
     <div>Display:
       <div *ngFor="let cup of cups">
-        <input [(ngModel)]="cup.display" placeholder="cup.display">
+        <select [(ngModel)]="cup.display">
+          <option value="small">small</option>
+          <option value="medium">medium</option>
+          <option value="large">large</option>
+        </select>
+        <!-- <input [(ngModel)]="cup.display" placeholder="cup.display"> -->
         <button (click)="save(cup)">&#10003;</button>
         <button (click)="delete(cup); $event.stopPropagation()">x</button>
       </div>
