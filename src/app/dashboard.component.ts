@@ -5,7 +5,8 @@ import { CupService } from './cup.service';
 
 @Component({
   selector: 'my-dashboard',
-  templateUrl: './cups-dashboard.component.html'
+  templateUrl: './cups-dashboard.component.html',
+  styleUrls: ['./cups-dashboard.component.css']
 })
 
 export class DashboardComponent implements OnInit {

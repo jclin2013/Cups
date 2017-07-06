@@ -1,8 +1,4 @@
 <div class="cups">
-
-  <button (click)="saveAll(this.cups)">Save All Changes</button>
-  <button (click)="gotoCupsForm()">Add a New Cup</button>
-
   <div id="table">
     <div>Name:
       <div *ngFor="let cup of cups">
@@ -21,7 +17,7 @@
     </div>
 
     <div>Display:
-      <div *ngFor="let cup of cups">
+      <div id="displaySection" *ngFor="let cup of cups">
         <select [(ngModel)]="cup.display">
           <option value="small">small</option>
           <option value="medium">medium</option>
@@ -31,5 +27,10 @@
         <button (click)="delete(cup); $event.stopPropagation()">x</button>
       </div>
     </div>
+  </div>
+
+  <div class='cups-table-button-row'>
+    <button (click)="saveAll(this.cups)">Save All Changes</button>
+    <button (click)="gotoCupsForm()">Add a New Cup</button>
   </div>
 </div>

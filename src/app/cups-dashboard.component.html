@@ -1,13 +1,15 @@
-<div *ngFor="let cup of cups">
-  <div *ngIf="cup.display == 'large'">
-    <div class="{{cup.display + 'Cup'}}">{{cup.name}}</div>
-  </div>
+<div id="cupsDashContainer">
+  <div *ngFor="let cup of cups">
+    <div *ngIf="cup.display == 'large'" class="{{cup.display + 'Cup'}}">
+      <div>{{cup.name}}</div>
+    </div>
 
-  <div *ngIf="cup.display == 'medium'">
-    <div class="{{cup.display  + 'Cup'}}">{{cup.name}}</div>
-  </div>
+    <div *ngIf="cup.display == 'medium'" class="{{cup.display  + 'Cup'}}">
+      <div>{{cup.name}}
+    </div></div>
 
-  <div *ngIf="cup.display == 'small'">
-    <div class="{{cup.display  + 'Cup'}}">{{cup.name}}</div>
+    <div *ngIf="cup.display == 'small'" class="{{cup.display  + 'Cup'}}">
+      <div>{{cup.name}}</div>
+    </div>
   </div>
 </div>

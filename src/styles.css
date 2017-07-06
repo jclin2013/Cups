@@ -3,11 +3,35 @@ html {
   justify-content: center;
   margin-top: 100px;
   height: 100vh;
-  background: lightblue;
+  background: #66a3b7;
+  font-family: 'Zilla Slab', serif;
 }
 
 #consoleContainer {
-  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding: 40px;
   border-radius: 30px;
+  background: #a1d5e6;
+  /*width: 100%;*/
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  width: calc(100% + 40px);
+}
+
+nav > * {
+  text-decoration: none;
+  color: teal;
+}
+nav > *:hover {
+  transform: scale(1.1);
+}
+
+nav a.active {
+  color: white;
 }

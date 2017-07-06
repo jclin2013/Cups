@@ -3,31 +3,32 @@
 
     <img src='../cup.png' />
 
-    <div>
-      <div>Name:</div>
-      <input #name />
+    <div id="inputFields">
+      <div>
+        <div>Name:</div>
+        <input #name />
+      </div>
+
+      <div>
+        <div>Material:</div>
+        <select #material>
+          <option value="">Select</option>
+          <option value="paper">paper</option>
+          <option value="glass">glass</option>
+          <option value="ceramic">ceramic</option>
+        </select>
+      </div>
+
+      <div>
+        <div>Display:</div>
+        <select #display>
+          <option value="">Select</option>
+          <option value="small">small</option>
+          <option value="medium">medium</option>
+          <option value="large">large</option>
+        </select>
+      </div>
     </div>
 
-    <div>
-      <div>Material:</div>
-      <select #material>
-        <option value="">Select</option>
-        <option value="paper">paper</option>
-        <option value="glass">glass</option>
-        <option value="ceramic">ceramic</option>
-      </select>
-    </div>
-
-    <div>
-      <div>Display:</div>
-      <select #display>
-        <option value="">Select</option>
-        <option value="small">small</option>
-        <option value="medium">medium</option>
-        <option value="large">large</option>
-      </select>
-    </div>
-
-
-  <button (click)="add(name.value, material.value, display.value)">Add Cup</button>
+    <button id="addCupButton" (click)="add(name.value, material.value, display.value)">Add Cup</button>
 </div>

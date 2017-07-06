@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'my-cups-form',
   templateUrl: './cups-form.component.html',
-  //styleUrls: [ './cups-form.component.css' ]
+  styleUrls: [ './cups-form.component.css' ]
 })
 
 export class CupsFormComponent {

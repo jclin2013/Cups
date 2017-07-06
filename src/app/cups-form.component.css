@@ -1,0 +1,41 @@
+img {
+  height: 150px;
+  margin: 30px 0px 20px 0px;
+}
+
+#cupsFormContainer {
+  display: flex;
+  flex-direction: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#cupsForm {
+  width: 100%;
+}
+
+#inputFields input {
+  width: 97%;
+  outline: none;
+}
+
+#inputFields select {
+  width: 100%;
+}
+
+#inputFields > *:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+#addCupButton {
+  padding: 5px 10px 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+  margin-top: 20px;
+}
+
+#addCupButton:hover {
+  background-color: gray;
+  color: white;
+}
