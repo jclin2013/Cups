@@ -20,7 +20,7 @@ export class CupsFormComponent {
 
   add(name: string, material: string, display: string): void {
     name = name.trim();
-    //if (!name || !material || !display) { return; }
+    if (!name || !material || !display) { return; }
     this.cupService.create(name, material, display)
       .then(() => this.gotoCupsTable());
   }
