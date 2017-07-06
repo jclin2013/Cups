@@ -27,43 +27,9 @@
           <option value="medium">medium</option>
           <option value="large">large</option>
         </select>
-        <!-- <input [(ngModel)]="cup.display" placeholder="cup.display"> -->
         <button (click)="save(cup)">&#10003;</button>
         <button (click)="delete(cup); $event.stopPropagation()">x</button>
       </div>
     </div>
   </div>
 </div>
-
-<!-- <div class="cups">
-
-  <button (click)="save()">Save Changes</button>
-  <button (click)="gotoCupsForm()">Add a New Cup</button>
-
-  <div id="table">
-    <div>Name:
-      <div *ngFor="let cup of cups">
-        <input [(ngModel)]="cup.name" placeholder="cup.name">
-      </div>
-    </div>
-
-    <div>Material:
-      <select *ngModel="selectedMaterial" ng-options="material for material in materials">
-      </select>
-    </div>
-
-    <div>Display:
-      <div *ngFor="let cup of cups">
-        <input [(ngModel)]="cup.display" placeholder="cup.display">
-        <button>x</button>
-      </div>
-    </div>
-
-    <script>
-      var app = angular.module('myApp', []);
-      app.controller('myCtrl', function($scope) {
-          $scope.names = ["Emil", "Tobias", "Linus"];
-      });
-    </script>
-
-</div> -->
