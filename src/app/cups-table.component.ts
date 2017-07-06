@@ -13,11 +13,11 @@ import { Router } from '@angular/router';
 export class CupsTableComponent implements OnInit {
   cups: Cup[];
 
-  save(cup): void {
+  save(cup: Cup): void {
     this.cupService.update(cup);
   }
 
-  saveAll(cups): void {
+  saveAll(cups: Cup[]): void {
     this.cupService.updateAll(cups);
   }
 
