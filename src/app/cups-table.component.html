@@ -20,7 +20,7 @@
       <div *ngFor="let cup of cups">
         <input [(ngModel)]="cup.display" placeholder="cup.display">
         <button (click)="save(cup)">&#10003;</button>
-        <button>x</button>
+        <button (click)="delete(cup); $event.stopPropagation()">x</button>
       </div>
     </div>
   </div>

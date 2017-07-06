@@ -37,4 +37,12 @@ export class CupsTableComponent implements OnInit {
   gotoCupsForm(): void {
     this.router.navigate(['/cupsform']);
   }
+
+  delete(cup: Cup): void {
+  this.cupService
+      .delete(cup.id)
+      .then(() => {
+        this.cups = this.cups.filter(c => c !== cup);
+      });
+}
 }
