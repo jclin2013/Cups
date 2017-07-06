@@ -22,7 +22,7 @@ const routes: Routes = [
     path: '',
     redirectTo: '/cupsform',
     pathMatch: 'full'
-  },
+  }
 ];
 
 @NgModule({
