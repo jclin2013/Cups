@@ -15,6 +15,8 @@ export class AppComponent  {
   title = 'Cups';
   cup: Cup = {
     id: 1,
-    name: 'Starbucks'
+    name: 'Starbucks',
+    material: 'glass',
+    display: 'large'
   }
 }
