@@ -8,12 +8,6 @@ import { CupService } from './cup.service';
 })
 
 export class CupsTableComponent implements OnInit {
-  selectedCup: Cup;
-
-  onSelect(cup: Cup): void {
-    this.selectedCup = cup;
-  };
-
   cups: Cup[];
 
   constructor(private cupService: CupService) { };

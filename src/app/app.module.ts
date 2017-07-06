@@ -6,6 +6,7 @@ import { RouterModule }   from '@angular/router';
 import { AppComponent }  from './app.component';
 import { CupsTableComponent }  from './cups-table.component';
 import { DashboardComponent }  from './dashboard.component';
+import { CupsFormComponent }  from './cups-form.component';
 import { CupService } from './cup.service';
 
 @NgModule({
@@ -22,8 +23,12 @@ import { CupService } from './cup.service';
           component: DashboardComponent
         },
         {
+          path: 'cupsform',
+          component: CupsFormComponent
+        },
+        {
           path: '',
-          redirectTo: '/dashboard',
+          redirectTo: '/cupsform',
           pathMatch: 'full'
         },
       ])
@@ -31,7 +36,8 @@ import { CupService } from './cup.service';
   declarations: [
       AppComponent,
       DashboardComponent,
-      CupsTableComponent
+      CupsTableComponent,
+      CupsFormComponent
     ],
   providers: [CupService],
   bootstrap:    [ AppComponent ]
