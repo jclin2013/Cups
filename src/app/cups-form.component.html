@@ -1,27 +1,23 @@
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
 <div id="cupsFormContainer">
   <div id="cupsForm">
-    <div>
-      <div>Material:</div>
-      <select>
-        <option>Paper</option>
-        <option>Glass</option>
-        <option>Ceramic</option>
-      </select>
-    </div>
 
     <div>
       <div>Name:</div>
-      <input type="div" name="" value="">
+      <input #name />
+    </div>
+
+    <div>
+      <div>Material:</div>
+      <input #material />
     </div>
 
     <div>
       <div>Display:</div>
-      <select>
-        <option>Large</option>
-        <option>Medium</option>
-        <option>Small</option>
-      </select>
-  </div>
+      <input #display />
+    </div>
 
-  <input type="submit" name="" value="Add Cup">
+
+  <button (click)="add(name.value, material.value, display.value)">Add Cup</button>
 </div>

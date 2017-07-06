@@ -1,6 +1,6 @@
 <div class="cups">
 
-  <button>Save changes</button>
+  <button (click)="saveAll(this.cups)">Save All Changes</button>
   <button (click)="gotoCupsForm()">Add a New Cup</button>
 
   <div id="table">
@@ -19,34 +19,42 @@
     <div>Display:
       <div *ngFor="let cup of cups">
         <input [(ngModel)]="cup.display" placeholder="cup.display">
+        <button (click)="save(cup)">&#10003;</button>
+        <button>x</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="cups">
+
+  <button (click)="save()">Save Changes</button>
+  <button (click)="gotoCupsForm()">Add a New Cup</button>
+
+  <div id="table">
+    <div>Name:
+      <div *ngFor="let cup of cups">
+        <input [(ngModel)]="cup.name" placeholder="cup.name">
+      </div>
+    </div>
+
+    <div>Material:
+      <select *ngModel="selectedMaterial" ng-options="material for material in materials">
+      </select>
+    </div>
+
+    <div>Display:
+      <div *ngFor="let cup of cups">
+        <input [(ngModel)]="cup.display" placeholder="cup.display">
         <button>x</button>
       </div>
     </div>
 
-</div>
-<!-- <ul class="cups">
-  <div>
-  <li
-    *ngFor="let cup of cups"
-    (click)="onSelect(cup)"
-    [class.selected]="cup === selectedCup">
-    <span class="singleCup">{{cup.id}}</span> {{cup.name}}
-  </li>
-</ul> -->
+    <script>
+      var app = angular.module('myApp', []);
+      app.controller('myCtrl', function($scope) {
+          $scope.names = ["Emil", "Tobias", "Linus"];
+      });
+    </script>
 
-<!-- <div *ngIf="selectedCup">
-  <h2>{{selectedCup.name}} details!</h2>
-  <div><label>id: </label>{{selectedCup.id}}</div>
-  <div>
-    <label>name: </label>
-    <input [(ngModel)]="selectedCup.name" placeholder="selectedCup.name">
-  </div>
-  <div>
-    <label>material: </label>
-    <input [(ngModel)]="selectedCup.material" placeholder="selectedCup.material">
-  </div>
-  <div>
-    <label>display: </label>
-    <input [(ngModel)]="selectedCup.display" placeholder="selectedCup.display">
-  </div>
 </div> -->

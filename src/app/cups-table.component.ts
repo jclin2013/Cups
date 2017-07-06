@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CupService } from './cup.service';
+import { Cup } from './cup';
 
 import { Router } from '@angular/router';
 
@@ -12,7 +13,13 @@ import { Router } from '@angular/router';
 export class CupsTableComponent implements OnInit {
   cups: Cup[];
 
-  //constructor() { };
+  save(cup): void {
+    this.cupService.update(cup);
+  }
+
+  saveAll(cups): void {
+    this.cupService.updateAll(cups);
+  }
 
   getCups(): void {
     this.cupService.getCups().then(cups => this.cups = cups);

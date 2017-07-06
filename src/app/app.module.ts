@@ -1,9 +1,12 @@
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule }   from '@angular/forms';
-import { RouterModule }   from '@angular/router';
+import { HttpModule }    from '@angular/http';
 
-import { AppRoutingModule } from './app-routing.module'
+import { AppRoutingModule } from './app-routing.module';
+
+import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService }  from './in-memory-data.service';
 
 import { AppComponent }  from './app.component';
 import { CupsTableComponent }  from './cups-table.component';
@@ -15,15 +18,17 @@ import { CupService } from './cup.service';
   imports:      [
       BrowserModule,
       FormsModule,
-      AppRoutingModule
-    ],
+      HttpModule,
+      AppRoutingModule,
+      InMemoryWebApiModule.forRoot(InMemoryDataService)
+  ],
   declarations: [
       AppComponent,
       DashboardComponent,
       CupsTableComponent,
       CupsFormComponent
     ],
-  providers: [CupService],
+  providers: [ CupService ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
