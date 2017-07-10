@@ -2,7 +2,7 @@
   <div id="table">
     <div>Name:
       <div *ngFor="let cup of cups">
-        <input [(ngModel)]="cup.name" placeholder="cup.name">
+        <input [(ngModel)]="cup.name" placeholder="{{placeholders[cup.id]}}">
       </div>
     </div>
 

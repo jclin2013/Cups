@@ -6,7 +6,9 @@ var options = {
 };
 
 var pgp = require('pg-promise')(options);
-var connectionString = process.env.DATABASE_URL;
+
+
+var connectionString = process.env.DATABASE_URL ? process.env.DATABASE_URL : 'postgres://localhost:5432/cups';
 var db = pgp(connectionString);
 
 function getAllCups(req, res, next) {

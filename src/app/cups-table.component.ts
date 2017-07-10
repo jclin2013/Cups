@@ -22,7 +22,18 @@ export class CupsTableComponent implements OnInit {
   }
 
   getCups(): void {
-    this.cupService.getCups().then(cups => this.cups = cups);
+    this.cupService.getCups().then(cups => {
+      this.cups = cups;
+      this.createPlaceHolders(cups);
+    });
+  }
+
+  placeholders = {}
+
+  createPlaceHolders(cups: Cup[]): void {
+    cups.forEach(cup => {
+      this.placeholders[cup.id] = cup.name;
+    });
   }
 
   ngOnInit(): void {
@@ -44,5 +55,5 @@ export class CupsTableComponent implements OnInit {
       .then(() => {
         this.cups = this.cups.filter(c => c !== cup);
       });
-}
+  }
 }
